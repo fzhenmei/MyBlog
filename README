@@ -1,0 +1,1 @@
+This my blog source code, port from BlogEngine. http://blogengile.codeplex.com. Since BlogEngine team upgrade to .NET 4, my blog web hosting does not support .NET 4, so I need maintain a version can run under .NET 3.5. I also add my blog theme which create by others.
