@@ -21,3 +21,6 @@ PublishProfiles/
 *.psess
 *.vsp
 *.csv
+BlogEngine/PrecompiledWeb/
+BlogEngine/BlogEngine.NET/App_Data/datastore/extensions/
+BlogEngine/packages/
