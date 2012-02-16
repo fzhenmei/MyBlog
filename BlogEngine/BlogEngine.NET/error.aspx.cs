@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.UI.HtmlControls;
-using BlogEngine.Core.Web.Controls;
 using BlogEngine.Core;
-using System.Collections.Generic;
+using BlogEngine.Core.Web.Controls;
 
 public partial class error_occurred : BlogBasePage
 {
@@ -19,16 +15,17 @@ public partial class error_occurred : BlogBasePage
     {
         string contextItemKey = "LastErrorDetails";
 
-        if (Security.IsAuthorizedTo(Rights.ViewDetailedErrorMessages) && HttpContext.Current.Items.Contains(contextItemKey))
-        { 
-            string errorDetails = (string)HttpContext.Current.Items[contextItemKey];
+        if (Security.IsAuthorizedTo(Rights.ViewDetailedErrorMessages) &&
+            HttpContext.Current.Items.Contains(contextItemKey))
+        {
+            var errorDetails = (string) HttpContext.Current.Items[contextItemKey];
 
             if (!string.IsNullOrEmpty(errorDetails))
             {
-                divErrorDetails.Visible = true;                
+                divErrorDetails.Visible = true;
                 pDetails.InnerHtml = Server.HtmlEncode(errorDetails);
                 pDetails.InnerHtml = errorDetails.Replace(Environment.NewLine, "<br /><br />");
             }
-        }        
+        }
     }
 }

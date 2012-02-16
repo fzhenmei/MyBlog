@@ -1,4 +1,4 @@
-﻿namespace BlogEngine.Core.Web.HttpModules
+﻿ namespace BlogEngine.Core.Web.HttpModules
 {
     using System;
     using System.IO;
@@ -125,7 +125,7 @@
         {
             var context = ((HttpApplication)sender).Context;
             if (context.CurrentHandler is Page && context.Request["HTTP_X_MICROSOFTAJAX"] == null &&
-                context.Request.HttpMethod == "GET")
+                context.Request.HttpMethod == "GET" && context.Server.GetLastError() == null)
             {
                 CompressResponse(context);
 
