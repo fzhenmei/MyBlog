@@ -27,4 +27,4 @@ BlogEngine/packages/
 BlogEngine/BlogEngine.NET/App_Data/Elmah.Errors/*
 BlogEngine/BlogEngine.NET/App_Data/posts/*
 *.db
-BlogEngine.NET/App_Data/datastore/widgets/*
+BlogEngine/BlogEngine.NET/App_Data/datastore/widgets/*
